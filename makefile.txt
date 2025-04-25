@@ -1,0 +1,8 @@
+run:
+	go run cmd/api/main.go
+
+migrate:
+	tern migrate --migrations ./scripts/migrations --conn "postgres://postgres:mysecretpassword@localhost:5432/postgres?sslmode=disable"
+
+test:
+	go test -v ./...
